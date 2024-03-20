@@ -1,0 +1,42 @@
+.container{
+    display: flex;
+    
+    flex-direction: column;
+    
+    margin-top: 1vh;
+
+}
+.hm{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    justify-content: center;
+    display: flex;
+    margin-top: 180px;
+}
+.mbtn{
+    background-color: tomato;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+    border: 2px solid black ;
+    border-radius: 5px;
+    margin: 1% 20%;
+    color: black;
+    text-decoration: none;
+}
+
+.mbtn:hover{
+    background-color: transparent;
+    border: 2px solid black ;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.linkm{
+    text-decoration: none;
+}
+.maincm{
+    background-image: url('https://img.freepik.com/free-vector/fruit-vegetables-background_23-2148497857.jpg?w=740&t=st=1695718195~exp=1695718795~hmac=ce28be1ae27a88287e3c0ffa1b6a25dc025f082fafc294e070cf911b56aac35f');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    
+}

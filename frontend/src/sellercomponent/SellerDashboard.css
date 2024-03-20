@@ -1,0 +1,74 @@
+/* SellerDashboard.css */
+.seller-dashboard {
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+h2 {
+  color: #333;
+}
+
+.order-summary {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.summary-item {
+  flex: 1;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+}
+
+.summary-item h3 {
+  color: #333;
+}
+
+.summary-item p {
+  font-size: 24px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.dashboard-shortcuts {
+  display: flex;
+  justify-content: space-between;
+}
+
+.shortcut-link {
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.shortcut-link:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .seller-dashboard {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .summary-item {
+    padding: 15px;
+  }
+
+  .shortcut-link {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}

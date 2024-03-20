@@ -1,0 +1,51 @@
+/* CSS for styling the label */
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    /* Text color */
+    margin-bottom: 10px;
+    /* Add some spacing below the label */
+    display: block;
+    /* Display the label as a block element */
+}
+
+
+/* CSS for styling the select element */
+
+select {
+    width: 50%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    /* Border color */
+    border-radius: 4px;
+    /* Rounded corners */
+    background-color: #fff;
+    /* Background color */
+    color: #333;
+    /* Text color */
+    transition: border-color 0.2s ease-in-out;
+    /* Smooth transition for border color on hover/focus */
+}
+
+
+/* CSS for hover and focus effects on the select element */
+
+select:hover,
+select:focus {
+    border-color: #007bff;
+    /* Highlight border color on hover/focus */
+}
+
+
+/* CSS for styling the options within the select element */
+
+select option {
+    font-size: 16px;
+    color: #333;
+    /* Text color */
+    background-color: #fff;
+    /* Background color */
+}

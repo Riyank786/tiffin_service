@@ -1,0 +1,7 @@
+.dashboard{
+    background-color: aqua;
+    display: flex;
+    margin: auto;
+    padding-top: 100px;
+    height: 100vh;
+}

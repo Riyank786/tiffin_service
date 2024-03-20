@@ -1,0 +1,51 @@
+.main-content{
+    padding-top: 15%;
+}
+
+.custom-bg-1 {
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/4/47/Bharthana_Althan_area.jpg/1200px-Bharthana_Althan_area.jpg");
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: 70%;
+}
+
+.custom-bg-2 {
+    background-image: url("../Images/anand.jpeg");
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: 74%;
+}
+
+.custom-bg-3 {
+    background-image: url("../Images/vadodara.webp");
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: 70%;
+}
+
+.custom-bg-4 {
+    background-image: url("https://thecsrjournal.in/wp-content/uploads/2021/03/Ahmedabad-The-World-Heritage-City.jpeg");
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: 74%;
+}
+
+.custom-bg-5 {
+    background-image: url("../Images/fruits.jpg");
+    background-repeat: no-repeat;
+    height: 50vh;
+    background-size: cover;
+    margin-bottom:40px;
+}
+.bg-5-text{
+    padding-top: 10%;
+    color: black;
+    filter: none;
+    font-style: bold;
+}
+@media screen and (max-width:576px) {
+    .main-content{
+        padding-top: 50%;
+    }
+    
+}
