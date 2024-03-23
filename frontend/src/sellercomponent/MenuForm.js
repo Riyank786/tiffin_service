@@ -20,11 +20,19 @@ const MenuForm = ({ addMenuItem }) => {
 
   const handleImageChange = (e) => {
     const imageFile = e.target.files[0];
+  // convert the image to base64 string and then store it in the state
+    const reader = new FileReader();
+    reader.onloadend = () => {
+      setMenuItem({
+        ...menuItem,
+        image: reader.result,
+      });
+    };
 
-    setMenuItem({
-      ...menuItem,
-      image: imageFile,
-    });
+    // setMenuItem({
+    //   ...menuItem,
+    //   image: imageFile,
+    // });
   };
 
   const handleClick = async () => {
@@ -33,6 +41,10 @@ const MenuForm = ({ addMenuItem }) => {
     formData.append("description", menuItem.description);
     formData.append("price", menuItem.price);
     formData.append("image", menuItem.image);
+
+    console.log("Form Data:", formData);
+    return;
+
     const sellerData = JSON.parse(localStorage.getItem("data"));
 const seller = sellerData ? sellerData._id : null;
     formData.append("seller", seller);
