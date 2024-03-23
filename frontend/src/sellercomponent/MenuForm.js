@@ -20,19 +20,24 @@ const MenuForm = ({ addMenuItem }) => {
 
   const handleImageChange = (e) => {
     const imageFile = e.target.files[0];
-  // convert the image to base64 string and then store it in the state
+
+    // Create a new FileReader instance
     const reader = new FileReader();
-    reader.onloadend = () => {
+
+    // Define a callback function to handle the FileReader onload event
+    reader.onload = () => {
+      // Get the base64 data URL representation of the image
+      const base64Image = reader.result;
+
+      // Update the state with the base64 image
       setMenuItem({
         ...menuItem,
-        image: reader.result,
+        image: base64Image,
       });
     };
 
-    // setMenuItem({
-    //   ...menuItem,
-    //   image: imageFile,
-    // });
+    // Read the image file as a data URL (base64)
+    reader.readAsDataURL(imageFile);
   };
 
   const handleClick = async () => {
@@ -42,11 +47,8 @@ const MenuForm = ({ addMenuItem }) => {
     formData.append("price", menuItem.price);
     formData.append("image", menuItem.image);
 
-    console.log("Form Data:", formData);
-    return;
-
     const sellerData = JSON.parse(localStorage.getItem("data"));
-const seller = sellerData ? sellerData._id : null;
+    const seller = sellerData ? sellerData._id : null;
     formData.append("seller", seller);
 
     try {
@@ -55,46 +57,49 @@ const seller = sellerData ? sellerData._id : null;
         formData,
         {
           headers: {
-            "Content-Type": "multipart/form-data",
+            "Content-Type": "application/json",
           },
         }
       );
-      if (response.status === 200) {
+      if (response.status === 201) {
         alert("Menu item added successfully");
         console.log("Menu item added successfully");
-        
-       
+
+        addMenuItem({
+          name: menuItem.name,
+          description: menuItem.description,
+          price: menuItem.price,
+          image: menuItem.image,
+        });
+
+        setMenuItem({
+          name: "",
+          description: "",
+          price: 0,
+          image: null,
+        });
+
+        window.history.back();
       } else {
         console.log("Error:", response.data);
-        
       }
     } catch (error) {
       console.error("Error:", error);
     }
-
-    addMenuItem({
-      name: menuItem.name,
-      description: menuItem.description,
-      price: menuItem.price,
-      image: menuItem.image,
-    });
-
-    setMenuItem({
-      name: "",
-      description: "",
-      price: 0,
-      image: null,
-    });
   };
 
   return (
     <>
-    
       <div className="menu-form">
         <div className="form-group">
-        <h2     style={{
-     textAlign: 'center'
-    }}> Add New Menu</h2>
+          <h2
+            style={{
+              textAlign: "center",
+            }}
+          >
+            {" "}
+            Add New Menu
+          </h2>
           <label htmlFor="name">Name:</label>
           <input
             type="text"

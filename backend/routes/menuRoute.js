@@ -20,7 +20,7 @@ const storage = multer.diskStorage({
     },
 });
 const upload = multer({ storage: storage });
-router.post("/add-menu-item", upload.single('image'), addMenuController)
+router.post("/add-menu-item", addMenuController)
 router.get("/get-menu-item", getMenuController);
 router.get("/getById/:id", getByIdMenuController)
 router.delete("/delete-menu-item/:id", deleteMenuController);

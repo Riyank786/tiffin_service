@@ -18,10 +18,12 @@ const orderSchema = new mongoose.Schema({
         required: [true, "deliveryTime is required"]
     },
     cookingInstruction: {
-        type: String,
-        required: [true, "cookingInstruction is required"]
+        type: String
     },
-
+    isCompleted: {
+        type: Boolean,
+        default: false
+    },
     customer: {
         type: mongoose.Schema.Types.ObjectId,
         ref: "users",
@@ -31,7 +33,7 @@ const orderSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "users",
         required: [true, "seller is require"],
-    },
+    }
 
 }, {
     timestamps: { createdAt: 'created_at', updatedAt: 'updated_at' }

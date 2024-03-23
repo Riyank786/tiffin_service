@@ -3,23 +3,8 @@ const menu = require("../Model/menu");
 
 const addMenuController = async(req, res) => {
     try {
-        if (!req.file) {
-            return res.status(400).json({ message: 'No image provided' });
-        }
-
-        const image = req.file.filename;
-        const { name, description, price, seller } = req.body;
-
-
-        let obj = {
-            name: name,
-            description: description,
-            price: price,
-            image: image,
-            seller: seller
-        }
-
-        await menu.create(obj);
+        
+        await menu.create(req.body);
 
         return res.status(201).json({ message: 'Menu item added successfully' });
 

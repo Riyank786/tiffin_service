@@ -89,6 +89,7 @@ const MenuItemDetail = () => {
       .then(response => {
         console.log('Order placed successfully:', response.data);
         alert("Order placed successfully");
+        window.history.back();
       })
       .catch(error => {
         if (error.response) {
@@ -125,14 +126,14 @@ const MenuItemDetail = () => {
       <h2 className="text-center">Menu Item Detail</h2>
       <div className="row">
         <div className="col-6">
-          <img src={`/images/${menuItem.image}`} alt={menuItem.name} className='img-fluid' />
+          <img src={`${menuItem.image}`} alt={menuItem.name} className='img-fluid' />
           <p><span className="fw-bold">Meal Plan:</span> Trial (1 day), Weekly (5 Days), Monthly (20 Days)</p>
           <h4>Please read Offer & Terms:</h4>
           <p>Cut-off time is 8:00 PM the previous day which means place an order before the cut-off time</p>
           <p>Flexi Plans: If changes in current orders, skip a delivery, pause the plan, or cancel your plan, kindly inform us before the cut-off time. </p>
           <p>Delivery time may affect by +/- 45 mins depending on traffic, road closures and weather conditions</p>
           <p>Extra items should only be ordered along with a meal plan and from the same seller onlyExtra items should only be ordered along with a meal plan and from the same seller only   </p>
-          <p>Refund Policy: A cancellation fee of $5 on a trial order and $10 on all other orders is applicable.</p>
+          <p>Refund Policy: A cancellation fee of Rs.5 on a trial order and Rs.10 on all other orders is applicable.</p>
         </div>
 
 

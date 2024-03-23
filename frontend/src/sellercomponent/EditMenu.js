@@ -133,9 +133,8 @@ const EditMenu = () => {
         <div className="menu-items">
           {menuItems.map((item) => (
             <div key={item.id} className="menu-item">
-              <img src={`/images/${item.image}`} alt={item.name} />
+              <img src={`${item.image}`} alt={item.name} />
               <div className="item-details">
-
                 <h3>{item.name}</h3>
                 <p>{item.description}</p>
                 <p> &#8377;{item.price}</p>

@@ -14,7 +14,7 @@ function Home() {
 
   useEffect(() => {
     // Make a GET request to fetch menu items when the component mounts
-    axios.get('http://localhost:8080/api/v1/menu/get-menu-item') // Replace with the actual API endpoint
+    axios.get(`${process.env.REACT_APP_API_URL}/menu/get-menu-item`) // Replace with the actual API endpoint
       .then(response => {
         setMenuItems(response.data);
         console.log(response.data);
@@ -52,7 +52,7 @@ function Home() {
             <div className="col mb-5 mt-5 ms-5 " key={item._id}>
               <Link to={`/menu/${item._id}`} className="card-link">
                 <Cards
-                  imgsrc={`/images/${item.image}`}
+                  imgsrc={`${item.image}`}
                   title={item.name}
                   description={item.description}
                   price={item.price}
@@ -72,7 +72,7 @@ function Home() {
             <div className="col mb-5 mt-5 ms-5 " key={item._id}>
               <Link to={`/menu/${item._id}`} className="card-link">
                 <Cards
-                  imgsrc={`/images/${item.image}`}
+                  imgsrc={`${item.image}`}
                   title={item.name}
                   description={item.description}
                   price={item.price}
@@ -90,7 +90,7 @@ function Home() {
             <div className="col mb-5 mt-5 ms-5 " key={item._id}>
               <Link to={`/menu/${item._id}`} className="card-link">
                 <Cards
-                  imgsrc={`/images/${item.image}`}
+                  imgsrc={`${item.image}`}
                   title={item.name}
                   description={item.description}
                   price={item.price}
