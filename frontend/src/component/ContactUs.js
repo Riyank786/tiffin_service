@@ -63,7 +63,6 @@ function ContactPage() {
         <button type="submit" className=" d-block m-auto rounded-pill" value="Send Email">Send message</button>
       </form>
     </div></div>
-    <Footer/>
     </>
     
   );

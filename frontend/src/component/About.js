@@ -30,7 +30,7 @@ function About() {
      />
    </div>{" "}
  </div>
- <Footer/></>
+ </>
   );
 }
 

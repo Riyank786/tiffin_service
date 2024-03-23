@@ -6,7 +6,6 @@ function MyOrder() {
     <div className='wrap-1'>
       <Navbar/>
       <h1>my order</h1>
-      <Footer/>
     </div>
   )
 }
