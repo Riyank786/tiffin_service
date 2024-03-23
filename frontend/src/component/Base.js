@@ -6,7 +6,6 @@ function Base() {
   return (
     <div>
         <Main/>
-        <Footer/>
     </div>
   )
 }

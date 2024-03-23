@@ -118,7 +118,6 @@ const MyProfile = () => {
               </button>
             )}
           </div></div>
-          <Footer/>
         </>
       );
     };

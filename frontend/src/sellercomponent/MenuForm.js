@@ -20,6 +20,7 @@ const MenuForm = ({ addMenuItem }) => {
 
   const handleImageChange = (e) => {
     const imageFile = e.target.files[0];
+
     setMenuItem({
       ...menuItem,
       image: imageFile,
@@ -32,7 +33,6 @@ const MenuForm = ({ addMenuItem }) => {
     formData.append("description", menuItem.description);
     formData.append("price", menuItem.price);
     formData.append("image", menuItem.image);
-
     const sellerData = JSON.parse(localStorage.getItem("data"));
 const seller = sellerData ? sellerData._id : null;
     formData.append("seller", seller);
@@ -47,8 +47,8 @@ const seller = sellerData ? sellerData._id : null;
           },
         }
       );
-      alert("Menu item added successfully");
       if (response.status === 200) {
+        alert("Menu item added successfully");
         console.log("Menu item added successfully");
         
        
