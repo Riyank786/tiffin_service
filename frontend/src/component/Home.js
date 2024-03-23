@@ -31,7 +31,7 @@ function Home() {
   return (
     <>
     <Navbar/>
-      <div class="wrap ">
+      <div className="wrap ">
         <h1 className="mb-4"> Discover Tiffins in your Area:) </h1>{" "}
         <div className='search'>
       <FaSearch className='search-icon' size='25px'/>
